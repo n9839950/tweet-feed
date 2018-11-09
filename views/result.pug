@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  .data
+    svg
+  .page-header
+    h3(align='center')  Real-time Tweets
+    
+    .table-overflow
+      table#tweets-table.table.table-hover.table-bordered.table-striped
+        thead
+          tr
+            th Name
+            th Screen Name
+            th Date
+            th Tweet
+            th Location
+        tbody
+          each tweet in tweets
+            tr
+              td=tweet.user.name
+              td=tweet.user.screen_name
+              td=tweet.created_at
+              td=tweet.text
+              //- td=tweet.user.location
+          else
+            tr 
+              td No real-time tweet yet. Please wait...
+              td
+              td
+              td
+
+
+
+    
+    

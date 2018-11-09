@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .page-header.text-center
+    h3(align='center') Search tweets by #hashtag , (example : fortnite) 
+  form#main-form.form-horizontal(action='/result', method='get')
+    .row.text-center
+        .col-md-5.col-md-offset-1
+          input.form-control(type='text', name='location', id='location', placeholder='Location')
+        .col-md-5
+          input.form-control(type='text', name='keyword', id='keyword', placeholder='Keyword', autofocus)
+    br
+    .row
+      .text-center.col-md-10.col-md-offset-1
+          button.form-control.btn.btn-primary.btn-block.submit-btn(type='submit')
+            | Search
+
+
+  
